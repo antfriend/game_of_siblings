@@ -1,7 +1,7 @@
 link=clans.xls
-
+cards=24
 [all]="1-{(title)}"
-[back]=#0000#FFFF00#00110
+[back]=#FF0000#FFFF00#55FF55
 [box_back]=#FFFF77
 [box_border]=#FFcc00
 
@@ -36,4 +36,8 @@ icon=[all],A,air.png
 icon=[all],W,water.png
 icon=[all],E,earth.png
 icons=[all],[symbol],10%,50%,80%,15%,15%,15%,0,PN,center,center
+
+image="13-24","background.gif",0,0,6,9,0
+border=rectangle
+image="13-24","book.png",0.5,3,5,4,0,"T"
 
