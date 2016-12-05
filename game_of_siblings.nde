@@ -1,4 +1,4 @@
-link=tempdata01.xls
+link=clans.xls
 
 [all]="1-{(title)}"
 [back]=#0000#FFFF00#00110
