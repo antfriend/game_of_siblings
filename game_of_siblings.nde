@@ -2,42 +2,58 @@ link=clans.xls
 cards=24
 [all]="1-{(title)}"
 [back]=#FF0000#FFFF00#55FF55
+[front]=#FF0000#FFFF00#55FF55
 [box_back]=#FFFF77
 [box_border]=#FFcc00
+[white]=#FFFFFF
 
 rectangle=[all],0,0,100%,100%,[back]
 
 rectangle=[all],10%,10%,80%,40%,[box_back]
-image=[all],[image],10%,10%,80%,40%,0,P
-rectangle=[all],10%,10%,80%,40%,[box_border],empty,0.1
+image="1-23",[image],10%,10%,80%,40%,0,P
+rectangle="1-23",10%,10%,80%,40%,[box_border],empty,0.06
 
-font="Arial",16,T,#ffFF00
+font="Matura MT Script Capitals",16,T,#ffFF00
 text=[all],[title],0,0,100%,10%,center,center,0,90,0.1
-font="Arial",16,T,#000000
+font="Matura MT Script Capitals",16,TB,#000000
 text=[all],[title],0,0,100%,10%,center,center
 
-ellipse=[all],0%,0%,20%,15%,[box_back]
-ellipse=[all],0%,0%,20%,15%,[box_border],empty,0.1
-ellipse=[all],80%,0%,20%,15%,[box_back]
-ellipse=[all],80%,0%,20%,15%,[box_border],empty,0.1
+ellipse="1-23",0%,0%,20%,15%,[box_back]
+ellipse="1-23",0%,0%,20%,15%,[box_border],empty,0.1
+ellipse="1-23",80%,0%,20%,15%,[box_back]
+ellipse="1-23",80%,0%,20%,15%,[box_border],empty,0.1
 
-font="Arial",22,T,#000000
-text=[all],[val1],0%,0%,20%,15%
-text=[all],[val2],80%,0%,20%,15%
+font="Matura MT Script Capitals",22,T,#000000
+text="1-23",[val1],0%,0%,20%,15%
+text="1-23",[val2],80%,0%,20%,15%
 
-rectangle=[all],10%,65%,80%,30%,[box_back]
-rectangle=[all],10%,65%,80%,30%,[box_border],empty,0.1
+rectangle="1-23",10%,54%,80%,30%,[box_back]
+rectangle="1-23",10%,54%,80%,30%,[box_border],empty,0.06
 
-font="Arial",10,T,#000000
-text=[all],[text],15%,70%,70%,20%,left,wwtop
+font="Matura MT Script Capitals",10,TNF,#000000
+text="1-23",[text],15%,54%,70%,20%,left,wwtop
 
 icon=[all],F,fire.png
 icon=[all],A,air.png
 icon=[all],W,water.png
 icon=[all],E,earth.png
-icons=[all],[symbol],10%,50%,80%,15%,15%,15%,0,PN,center,center
+icons=[all],[symbol],10%,100%,80%,15%,15%,15%,0,PN,center,bottom
 
 image="13-24","background.gif",0,0,6,9,0
-border=rectangle
-image="13-24","book.png",0.5,3,5,4,0,"T"
 
+ellipse="13-24",38%,47%,20%,10%,[white]
+image="13-24","explode2.png",0.5,2.6,5,4,0,"T"
+image="13-24","star.png",0.5,2.5,5,4,0,"T"
+
+font="Matura MT Script Capitals",38,T,#000000
+text="13-24","Clans of",0%,10%,100%,100%,center,wwtop
+font="Matura MT Script Capitals",38,T,#000000
+text="13-24","Pagoda",0,0,100%,90%,center,wwbottom
+
+VISUAL=GP, 10, 10
+ICON=1-24,h,heart100.png
+ICON=1-24,i,heart50.png
+ICON=1-24,j,heart25.png
+ICON=1-24,k,heart0.png
+ICONS=1-12,kjih,0,85%,100%,18%,25%,2,0,NAP,CENTER,BOTTOM
+ENDVISUAL
