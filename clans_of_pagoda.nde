@@ -9,6 +9,8 @@ cards=24
 
 rectangle=[all],0,0,100%,100%,[back]
 
+
+
 rectangle=[all],10%,10%,80%,40%,[box_back]
 image="1-23",[image],10%,10%,80%,40%,0,P
 rectangle="1-23",10%,10%,80%,40%,[box_border],empty,0.06
@@ -18,20 +20,20 @@ text=[all],[title],0,0,100%,10%,center,center,0,90,0.1
 font="Matura MT Script Capitals",16,TB,#000000
 text=[all],[title],0,0,100%,10%,center,center
 
-ellipse="1-23",0%,0%,20%,15%,[box_back]
-ellipse="1-23",0%,0%,20%,15%,[box_border],empty,0.1
-ellipse="1-23",80%,0%,20%,15%,[box_back]
-ellipse="1-23",80%,0%,20%,15%,[box_border],empty,0.1
+ellipse="1-23",0%,0%,19%,15%,[box_back]
+ellipse="1-23",0%,0%,19%,15%,[box_border],empty,0.1
+ellipse="1-23",80%,0%,19%,15%,[box_back]
+ellipse="1-23",80%,0%,19%,15%,[box_border],empty,0.1
 
 font="Matura MT Script Capitals",22,T,#000000
 text="1-23",[val1],0%,0%,20%,15%
 text="1-23",[val2],80%,0%,20%,15%
-
+#image="1-12","d12a.png",1%,1%,1,1
 rectangle="1-23",10%,54%,80%,30%,[box_back]
 rectangle="1-23",10%,54%,80%,30%,[box_border],empty,0.06
 
-font="Matura MT Script Capitals",10,TNF,#000000
-text="1-23",[text],15%,54%,70%,20%,left,wwtop
+font="Arial",10,TNF,#000000
+text="1-23",[text],15%,54%,70%,20%,left,center
 
 icon=[all],F,fire.png
 icon=[all],A,air.png
@@ -50,10 +52,14 @@ text="13-24","Clans of",0%,10%,100%,100%,center,wwtop
 font="Matura MT Script Capitals",38,T,#000000
 text="13-24","Pagoda",0,0,100%,90%,center,wwbottom
 
-VISUAL=GP, 10, 10
+VISUAL=G, 10, 10
 ICON=1-24,h,heart100.png
 ICON=1-24,i,heart50.png
 ICON=1-24,j,heart25.png
 ICON=1-24,k,heart0.png
-ICONS=1-12,kjih,0,85%,100%,18%,25%,2,0,NAP,CENTER,BOTTOM
+ICONS=1-12,kjih,0%,85%,100%,18%,25%,2,0,NAP,CENTER,BOTTOM
+IMAGE=1-12,d12.png,0%,0%,19%,15%,2,TP
+IMAGE=1-12,shield.png,70%,-4%,39%,24%,2,TP
+font="Matura MT Script Capitals",22,T,#000000
+text="1-23",[val2],80%,0%,20%,15%
 ENDVISUAL
