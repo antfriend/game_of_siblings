@@ -1,65 +1,80 @@
 link=clans.xls
-cards=24
-[all]="1-{(title)}"
+cards=72
+[all]="1-36"
+[characters]="1-19"
+[clans]="1-12"
+[monsters]="13-19"
+[travels]="20-24"
+[treasure]="25-36"
+[clans_back]="37-48"
+[map_back]="49-60"
+[treasure_back]="61-72"
 [back]=#FF0000#FFFF00#55FF55
-[front]=#FF0000#FFFF00#55FF55
+[front]=#FF0000#FFFF00#000000
 [box_back]=#FFFF77
 [box_border]=#FFcc00
 [white]=#FFFFFF
 
-rectangle=[all],0,0,100%,100%,[back]
-
-
-
-rectangle=[all],10%,10%,80%,40%,[box_back]
-image="1-23",[image],10%,10%,80%,40%,0,P
-rectangle="1-23",10%,10%,80%,40%,[box_border],empty,0.06
+rectangle=[clans],0,0,100%,100%,[back]
+rectangle=[monsters],0,0,100%,100%,[front]
+rectangle=[characters],10%,10%,80%,40%,[box_back]
+image=[characters],[image],10%,10%,80%,40%,0,P
+#image=[clans],[topimage],0%,34%,50%,20%,0,PT
+image=[monsters],[topimage],22%,20%,50%,20%,0,PT
+rectangle=[characters],10%,10%,80%,40%,[box_border],empty,0.06
 
 font="Matura MT Script Capitals",16,T,#ffFF00
 text=[all],[title],0,0,100%,10%,center,center,0,90,0.1
 font="Matura MT Script Capitals",16,TB,#000000
 text=[all],[title],0,0,100%,10%,center,center
 
-ellipse="1-23",0%,0%,19%,15%,[box_back]
-ellipse="1-23",0%,0%,19%,15%,[box_border],empty,0.1
-ellipse="1-23",80%,0%,19%,15%,[box_back]
-ellipse="1-23",80%,0%,19%,15%,[box_border],empty,0.1
+ellipse=[characters],0%,0%,19%,15%,[box_back]
+ellipse=[characters],0%,0%,19%,15%,[box_border],empty,0.1
+ellipse=[characters],80%,0%,19%,15%,[box_back]
+ellipse=[characters],80%,0%,19%,15%,[box_border],empty,0.1
 
 font="Matura MT Script Capitals",22,T,#000000
-text="1-23",[val1],0%,0%,20%,15%
-text="1-23",[val2],80%,0%,20%,15%
-#image="1-12","d12a.png",1%,1%,1,1
-rectangle="1-23",10%,54%,80%,30%,[box_back]
-rectangle="1-23",10%,54%,80%,30%,[box_border],empty,0.06
+#text=[characters],[val1],0%,0%,20%,15%
+text=[characters],[val2],80%,0%,20%,15%
+#image=[characters],"d12a.png",1%,1%,1,1
+rectangle=[characters],10%,54%,80%,30%,[box_back]
+rectangle=[characters],10%,54%,80%,30%,[box_border],empty,0.06
 
 font="Arial",10,TNF,#000000
-text="1-23",[text],15%,54%,70%,20%,left,center
+text=[characters],[text],15%,54%,70%,20%,left,center
 
 icon=[all],F,fire.png
 icon=[all],A,air.png
 icon=[all],W,water.png
 icon=[all],E,earth.png
-icons=[all],[symbol],10%,100%,80%,15%,15%,15%,0,PN,center,bottom
-
-image="13-24","background.gif",0,0,6,9,0
-
-ellipse="13-24",38%,47%,20%,10%,[white]
-image="13-24","explode2.png",0.5,2.6,5,4,0,"T"
-image="13-24","star.png",0.5,2.5,5,4,0,"T"
-
-font="Matura MT Script Capitals",38,T,#000000
-text="13-24","Clans of",0%,10%,100%,100%,center,wwtop
-font="Matura MT Script Capitals",38,T,#000000
-text="13-24","Pagoda",0,0,100%,90%,center,wwbottom
+#icons=[all],[symbol],10%,100%,80%,15%,15%,15%,0,PN,center,bottom
 
 VISUAL=G, 10, 10
-ICON=1-24,h,heart100.png
-ICON=1-24,i,heart50.png
-ICON=1-24,j,heart25.png
-ICON=1-24,k,heart0.png
-ICONS=1-12,kjih,0%,85%,100%,18%,25%,2,0,NAP,CENTER,BOTTOM
-IMAGE=1-12,d12.png,0%,0%,19%,15%,2,TP
-IMAGE=1-12,shield.png,70%,-4%,39%,24%,2,TP
+ICON=[characters],h,heart100.png
+ICON=[characters],i,heart50.png
+ICON=[characters],j,heart25.png
+ICON=[characters],k,heart0.png
+ICONS=[characters],kjih,0%,85%,100%,18%,25%,2,0,NAP,CENTER,BOTTOM
+IMAGE=[clans],d12.png,0%,0%,19%,15%,2,TP
+IMAGE=[monsters],"6-Sided Die.png",0%,0%,19%,15%,2,TP
+IMAGE=[characters],shield.png,70%,-4%,39%,24%,2,TP
 font="Matura MT Script Capitals",22,T,#000000
-text="1-23",[val2],80%,0%,20%,15%
+text=[characters],[val2],80%,0%,20%,15%
 ENDVISUAL
+
+image=[clans_back],"background.gif",0,0,6,9,0
+
+ellipse=[clans_back],38%,47%,20%,10%,[white]
+image=[clans_back],"explode2.png",0.5,2.6,5,4,0,"T"
+image=[clans_back],"star.png",0.5,2.5,5,4,0,"T"
+
+font="Matura MT Script Capitals",38,T,#000000
+text=[clans_back],"Clans of",0%,10%,100%,100%,center,wwtop
+font="Matura MT Script Capitals",38,T,#000000
+text=[clans_back],"Pagoda",0,0,100%,90%,center,wwbottom
+
+image=[map_back],"excepteur.jpg",0,0,6,9,0
+image=[map_back],"excepteur.jpg",0.5,2.5,5,4,0,"T"
+
+image=[treasure_back],"background.gif",0,0,6,9,0
+image=[treasure_back],"star.png",0.5,2.5,5,4,0,"T"
