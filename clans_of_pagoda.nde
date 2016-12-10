@@ -1,6 +1,6 @@
 link=clans.xls,Title,Image,Text,Val1,Val2,Symbol,topimage
 
-cards=72
+cards=36
 [all]="1-36"
 [characters]="1-19"
 [clans]="1-12"
@@ -13,16 +13,20 @@ cards=72
 [treasure_back]="61-72"
 [back]=#FF0000#FFFF00#55FF55
 [front]=#FF0000#FFFF00#000000
+[nicey]=#FFcccc#FFFF00#ffcc00
 [box_back]=#223377
 [box_border]=#FFcc00
-[white]=#FFFFFF
+[white]=#CC9955
 
+rectangle=[all],10%,10%,80%,40%,[box_border]
 rectangle=[clans],0,0,100%,100%,[back]
 rectangle=[monsters],0,0,100%,100%,[front]
-rectangle=[all],10%,10%,80%,40%,[white]
-image=[all],[image],10%,10%,80%,40%,0,P
-#image=[clans],[topimage],0%,34%,50%,20%,0,PT
-image=[monsters],[topimage],22%,20%,50%,20%,0,PT
+rectangle=[travels],0,0,100%,100%,[nicey]
+rectangle=[treasure],0,0,100%,100%,[nicey]
+
+image=[all],[image],10%,10%,80%,40%,0,PN
+#image=[clans],[topimage],0%,34%,50%,20%,0,PTN
+image=[monsters],[topimage],22%,20%,50%,20%,0,PN
 rectangle=[all],10%,10%,80%,40%,[box_border],empty,0.06
 
 font="Matura MT Script Capitals",16,T,#ffFF00
@@ -39,7 +43,7 @@ font="Matura MT Script Capitals",22,T,#000000
 #text=[characters],[val1],0%,0%,20%,15%
 text=[characters],[val2],80%,0%,20%,15%
 #image=[characters],"d12a.png",1%,1%,1,1
-rectangle=[all],10%,54%,80%,30%,[white]
+rectangle=[all],10%,54%,80%,30%,[nicey]
 rectangle=[all],10%,54%,80%,30%,[box_border],empty,0.06
 
 font="Arial",10,TNF,#000000
@@ -66,8 +70,9 @@ text=[characters],[val2],80%,0%,20%,15%
 ENDVISUAL
 
 #IMAGE=[monsters],"chest.png",0%,40%,19%,15%,0,PT
-ICON=[monsters],T,"chest.png"
-icons=[monsters],[symbol],0%,25%,90%,45%,30%,25%,-9,PN,left,center
+ICON=[all],T,"chest.png"
+ICON=[all],S,"chest.png"
+icons=[all],[symbol],0%,25%,90%,45%,30%,25%,-9,PN,left,center
 
 image=[clans_back],"background.gif",0,0,6,9,0
 
@@ -130,3 +135,11 @@ tile=[range],[list],b,#000000,[wid_out]
 tile=[range],[list],b,#CCCCCC,[wid_in]
 tile=[range],[list],c,#000000,[wid_out]
 tile=[range],[list],c,#CCCCCC,[wid_in]
+
+[boss_back]="57"
+ellipse=[boss_back],15%,35%,69%,21%,[box_border]
+text=[boss_back],"Boss",0,0,100%,90%,center,center
+
+[home_back]="58"
+ellipse=[home_back],15%,35%,69%,21%,[box_border]
+text=[home_back],"Home",0,0,100%,90%,center,center
