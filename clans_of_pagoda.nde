@@ -1,4 +1,5 @@
-link=clans.xls
+link=clans.xls,Title,Image,Text,Val1,Val2,Symbol,topimage
+
 cards=72
 [all]="1-36"
 [characters]="1-19"
@@ -6,42 +7,43 @@ cards=72
 [monsters]="13-19"
 [travels]="20-24"
 [treasure]="25-36"
+[fronts]="1-36"
 [clans_back]="37-48"
 [map_back]="49-60"
 [treasure_back]="61-72"
 [back]=#FF0000#FFFF00#55FF55
 [front]=#FF0000#FFFF00#000000
-[box_back]=#FFFF77
+[box_back]=#223377
 [box_border]=#FFcc00
 [white]=#FFFFFF
 
 rectangle=[clans],0,0,100%,100%,[back]
 rectangle=[monsters],0,0,100%,100%,[front]
-rectangle=[characters],10%,10%,80%,40%,[box_back]
-image=[characters],[image],10%,10%,80%,40%,0,P
+rectangle=[all],10%,10%,80%,40%,[white]
+image=[all],[image],10%,10%,80%,40%,0,P
 #image=[clans],[topimage],0%,34%,50%,20%,0,PT
 image=[monsters],[topimage],22%,20%,50%,20%,0,PT
-rectangle=[characters],10%,10%,80%,40%,[box_border],empty,0.06
+rectangle=[all],10%,10%,80%,40%,[box_border],empty,0.06
 
 font="Matura MT Script Capitals",16,T,#ffFF00
-text=[all],[title],0,0,100%,10%,center,center,0,90,0.1
+text=[fronts],[title],0,0,100%,10%,center,center,0,90,0.1
 font="Matura MT Script Capitals",16,TB,#000000
 text=[all],[title],0,0,100%,10%,center,center
 
-ellipse=[characters],0%,0%,19%,15%,[box_back]
+ellipse=[characters],0%,0%,19%,15%,[box_border]
 ellipse=[characters],0%,0%,19%,15%,[box_border],empty,0.1
-ellipse=[characters],80%,0%,19%,15%,[box_back]
+ellipse=[characters],80%,0%,19%,15%,[box_border]
 ellipse=[characters],80%,0%,19%,15%,[box_border],empty,0.1
 
 font="Matura MT Script Capitals",22,T,#000000
 #text=[characters],[val1],0%,0%,20%,15%
 text=[characters],[val2],80%,0%,20%,15%
 #image=[characters],"d12a.png",1%,1%,1,1
-rectangle=[characters],10%,54%,80%,30%,[box_back]
-rectangle=[characters],10%,54%,80%,30%,[box_border],empty,0.06
+rectangle=[all],10%,54%,80%,30%,[white]
+rectangle=[all],10%,54%,80%,30%,[box_border],empty,0.06
 
 font="Arial",10,TNF,#000000
-text=[characters],[text],15%,54%,70%,20%,left,center
+text=[all],[text],15%,54%,70%,20%,left,center
 
 icon=[all],F,fire.png
 icon=[all],A,air.png
@@ -56,11 +58,16 @@ ICON=[characters],j,heart25.png
 ICON=[characters],k,heart0.png
 ICONS=[characters],kjih,0%,85%,100%,18%,25%,2,0,NAP,CENTER,BOTTOM
 IMAGE=[clans],d12.png,0%,0%,19%,15%,2,TP
-IMAGE=[monsters],"6-Sided Die.png",0%,0%,19%,15%,2,TP
-IMAGE=[characters],shield.png,70%,-4%,39%,24%,2,TP
+IMAGE=[monsters],"6-Sided Die.png",0%,0%,19%,15%,2,TPN
+IMAGE=[characters],"shield.png",70%,-4%,39%,24%,2,TPN
+
 font="Matura MT Script Capitals",22,T,#000000
 text=[characters],[val2],80%,0%,20%,15%
 ENDVISUAL
+
+#IMAGE=[monsters],"chest.png",0%,40%,19%,15%,0,PT
+ICON=[monsters],T,"chest.png"
+icons=[monsters],[symbol],0%,25%,90%,45%,30%,25%,-9,PN,left,center
 
 image=[clans_back],"background.gif",0,0,6,9,0
 
@@ -68,13 +75,58 @@ ellipse=[clans_back],38%,47%,20%,10%,[white]
 image=[clans_back],"explode2.png",0.5,2.6,5,4,0,"T"
 image=[clans_back],"star.png",0.5,2.5,5,4,0,"T"
 
+image=[treasure_back],"background.gif",0,0,6,9,0
+image=[treasure_back],"cloud.png",0.5,1.8,5,4,0,"TN"
+image=[treasure_back],"chest.png",0.5,2.9,5,4,0,"T"
+
 font="Matura MT Script Capitals",38,T,#000000
 text=[clans_back],"Clans of",0%,10%,100%,100%,center,wwtop
 font="Matura MT Script Capitals",38,T,#000000
 text=[clans_back],"Pagoda",0,0,100%,90%,center,wwbottom
+text=[treasure_back],"Treasure",0,0,100%,90%,center,wwbottom
 
-image=[map_back],"excepteur.jpg",0,0,6,9,0
-image=[map_back],"excepteur.jpg",0.5,2.5,5,4,0,"T"
+image=[map_back],"parchment.jpg",0,0,6,9,0
+#image=[map_back],"excepteur.jpg",0.5,2.5,5,4,0,"T"
 
-image=[treasure_back],"background.gif",0,0,6,9,0
-image=[treasure_back],"star.png",0.5,2.5,5,4,0,"T"
+macro=tile,(range),(key),(char),(color),(width)
+beziers=(range)
+if=[(key):1,1]=(char)
+  beziers=(range),50%,0,50%,25%,(color),(width)
+endif
+if=[(key):2,1]=(char)
+  beziers=(range),100%,25%,50%,25%,(color),(width)
+endif
+if=[(key):3,1]=(char)
+  beziers=(range),100%,75%,50%,75%,(color),(width)
+endif
+if=[(key):4,1]=(char)
+  beziers=(range),50%,100%,50%,75%,(color),(width)
+endif
+if=[(key):5,1]=(char)
+  beziers=(range),0,75%,50%,75%,(color),(width)
+endif
+if=[(key):6,1]=(char)
+  beziers=(range),0,25%,50%,25%,(color),(width)
+endif
+end
+
+oversample=2
+imagefilter=lanczos
+
+#cardsize=4,8
+
+pxxxs[list]6=a|a|b|b|c|c
+
+[range]=[map_back]
+
+[wid_out]=0.8
+[wid_in]=0.6
+
+rectangle=[range],0,0,100%,100%,#000000,empty,0.1
+
+tile=[range],[list],a,#000000,[wid_out]
+tile=[range],[list],a,#CCCCCC,[wid_in]
+tile=[range],[list],b,#000000,[wid_out]
+tile=[range],[list],b,#CCCCCC,[wid_in]
+tile=[range],[list],c,#000000,[wid_out]
+tile=[range],[list],c,#CCCCCC,[wid_in]
