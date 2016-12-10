@@ -1,6 +1,6 @@
 link=clans.xls,Title,Image,Text,Val1,Val2,Symbol,topimage
 
-cards=36
+cards=72
 [all]="1-36"
 [characters]="1-19"
 [clans]="1-12"
@@ -16,18 +16,19 @@ cards=36
 [nicey]=#FFcccc#FFFF00#ffcc00
 [box_back]=#223377
 [box_border]=#FFcc00
-[white]=#CC9955
+[white]=#FDFDFD
 
 rectangle=[all],10%,10%,80%,40%,[box_border]
 rectangle=[clans],0,0,100%,100%,[back]
 rectangle=[monsters],0,0,100%,100%,[front]
 rectangle=[travels],0,0,100%,100%,[nicey]
 rectangle=[treasure],0,0,100%,100%,[nicey]
+rectangle=[treasure],10%,10%,80%,40%,[white]
+rectangle=[all],10%,10%,80%,40%,[box_border],empty,0.06
 
 image=[all],[image],10%,10%,80%,40%,0,PN
 #image=[clans],[topimage],0%,34%,50%,20%,0,PTN
 image=[monsters],[topimage],22%,20%,50%,20%,0,PN
-rectangle=[all],10%,10%,80%,40%,[box_border],empty,0.06
 
 font="Matura MT Script Capitals",16,T,#ffFF00
 text=[fronts],[title],0,0,100%,10%,center,center,0,90,0.1
@@ -44,6 +45,7 @@ font="Matura MT Script Capitals",22,T,#000000
 text=[characters],[val2],80%,0%,20%,15%
 #image=[characters],"d12a.png",1%,1%,1,1
 rectangle=[all],10%,54%,80%,30%,[nicey]
+
 rectangle=[all],10%,54%,80%,30%,[box_border],empty,0.06
 
 font="Arial",10,TNF,#000000
@@ -56,7 +58,7 @@ icon=[all],E,earth.png
 #icons=[all],[symbol],10%,100%,80%,15%,15%,15%,0,PN,center,bottom
 
 VISUAL=G, 10, 10
-ICON=[characters],h,heart100.png
+ICON=[all],h,heart100.png
 ICON=[characters],i,heart50.png
 ICON=[characters],j,heart25.png
 ICON=[characters],k,heart0.png
@@ -71,8 +73,9 @@ ENDVISUAL
 
 #IMAGE=[monsters],"chest.png",0%,40%,19%,15%,0,PT
 ICON=[all],T,"chest.png"
-ICON=[all],S,"chest.png"
-icons=[all],[symbol],0%,25%,90%,45%,30%,25%,-9,PN,left,center
+ICON=[all],S,"shield.png"
+#ICON=[all],M,"shield.png"
+icons=[all],[symbol],0%,25%,110%,45%,30%,25%,-9,PN,left,center
 
 image=[clans_back],"background.gif",0,0,6,9,0
 
