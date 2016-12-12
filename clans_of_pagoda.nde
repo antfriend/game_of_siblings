@@ -1,10 +1,5 @@
 link=clans.xls,Title,Image,Text,Val1,Val2,Symbol,topimage,Health,Inst
 [happycardsiz]=6.35,8.89
-cards=76
-'#cardsize=5,7
-CARDSIZE=[happycardsiz]
-BORDER=ROUNDED,#000000,0.05
-PAGE=21.59,27.94,LANDSCAPE,HV
 
 [all]="1-36"
 [characters]="1-20"
@@ -23,6 +18,12 @@ PAGE=21.59,27.94,LANDSCAPE,HV
 [box_back]=#223377
 [box_border]=#FFcc00
 [white]=#FDFDFD
+
+cards=76
+'#cardsize=5,7
+CARDSIZE=[happycardsiz]
+BORDER=ROUNDED,[box_border],0.09
+PAGE=21.59,27.94,LANDSCAPE,HV
 
 rectangle=[all],10%,10%,80%,40%,[box_border]
 rectangle=[clans],0,0,100%,100%,[back]
@@ -70,6 +71,7 @@ ICON=[all],S,"shield.png"
 ICON=[all],W,"lsword.png"
 ICON=[all],M,"m2.png"
 ICON=[all],N,"m3.png"
+ICON=[all],O,"m99.png"
 icons=[all],[symbol],-1%,28%,59%,45%,29%,68%,0,PN,left,center
 
 
