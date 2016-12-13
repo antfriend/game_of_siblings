@@ -35,13 +35,14 @@ rectangle=[treasure],10%,11%,80%,45%,[white]
 image=[all],[image],10%,10%,80%,45%,0,PN
 image=[monsters],[topimage],40%,20%,50%,30%,0,NP
 rectangle=[all],10%,11%,80%,45%,[box_border],empty,0.1
+
+ellipse=[characters],0%,0%,25%,17%,[box_border]
+ellipse=[characters],75%,0%,25%,17%,[box_border]
+
 font="Matura MT Script Capitals",16,T,#ffFF00
 text=[fronts],[title],0,0,100%,10%,center,center,0,90,0.1
 font="Matura MT Script Capitals",16,TB,#000000
 text=[all],[title],0,0,100%,10%,center,center
-
-ellipse=[characters],0%,0%,25%,17%,[box_border]
-ellipse=[characters],75%,0%,25%,17%,[box_border]
 
 font="Matura MT Script Capitals",22,T,#000000
 text=[characters],[val2],80%,0%,20%,15%
@@ -73,7 +74,6 @@ ICON=[all],M,"m2.png"
 ICON=[all],N,"m3.png"
 ICON=[all],O,"m99.png"
 icons=[all],[symbol],-1%,28%,59%,45%,29%,68%,0,PN,left,center
-
 
 font="Arial",14,TNF,#000000
 text=[instructions],[Inst],5%,5%,90%,90%,left
